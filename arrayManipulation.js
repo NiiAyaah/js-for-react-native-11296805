@@ -1,11 +1,14 @@
-function processArray(numbers) {
-    const processedArray = numbers.map(num => {
-        if (num % 2 === 0) {
-            return num * num;
+function formatArrayStrings(strings, numbers) {
+
+    const formattedStrings = strings.map((str, index) => {
+        if (numbers[index] % 2 === 0) {
+            
+            return str.toUpperCase();
         } else {
-            return num * 3;
+            
+            return str.toLowerCase();
         }
     });
 
-    return processedArray;
+    return formattedStrings;
 }
